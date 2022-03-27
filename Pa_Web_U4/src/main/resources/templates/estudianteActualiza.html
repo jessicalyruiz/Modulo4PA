@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+ <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body>
+<class=container my-5>
+<h3>Actualizar Estudiante</h3>
+	<div class="card-body"> 
+	<form action="#" th:action="@{/estudiantes/actualizar/{idEstudiante}(idEstudiante=${estu.id})}" th:object="${estu}" th:method="POST">
+		<table>
+			<tr>
+				<td>
+					<label class="col-form-label">Id:</label>
+				</td>
+				<td>
+					<input type="text" id="id" th:field="*{id}">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label>Nombre:</label>
+				</td>
+				<td>
+					<input type="text" id="name" th:field="*{nombre}">
+				</td>
+			</tr>
+			<td>
+				<label>Apellido:</label>
+			</td>
+			<td>
+				<input type="text" id="apellido" th:field="*{apellido}">
+			</td>
+			<tr>
+			</tr>
+		</table>
+		<input class="btn btn-outline-dark" type="submit" value="Actualizar">
+	</form>
+</div>
+</body>
+
+
+
+</html>
